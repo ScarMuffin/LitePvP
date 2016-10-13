@@ -70,7 +70,7 @@ public class events implements Listener {
 		Player killed = e.getEntity().getPlayer();
 		Player killer = e.getEntity().getKiller();	
 		title.show(killed, ChatColor.RED + "Âû áûëè óáèòû " + ChatColor.GOLD + killer.getDisplayName(), null);
-		title.sendActionBar(killer, ChatColor.WHITE + "Âû óáèëè èãðîêà lol " + ChatColor.GOLD + killed.getDisplayName());
+		title.sendActionBar(killer, ChatColor.WHITE + "Âû óáèëè èãðîêà" + ChatColor.GOLD + killed.getDisplayName());
 	}
 
 }
