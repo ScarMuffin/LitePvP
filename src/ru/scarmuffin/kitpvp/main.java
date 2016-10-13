@@ -31,7 +31,7 @@ public class main extends JavaPlugin {
 		Bukkit.getConsoleSender().sendMessage(ChatColor.GOLD + "[KitPvP]" + ChatColor.GREEN + "Plugin Enabled");
 	}
 	public void onDisable(){
-		Bukkit.getConsoleSender().sendMessage(ChatColor.GOLD + "[KitPvP]" + ChatColor.GREEN + "Plugin Disabled");
+		Bukkit.getConsoleSender().sendMessage(ChatColor.GOLD + "[KitPvP]" + ChatColor.GREEN + "Plugin currently disabled");
 	}
     public void registerEvents() {
         this.pm.registerEvents((Listener)new events(), (Plugin)this);
