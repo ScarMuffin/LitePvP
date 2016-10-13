@@ -18,10 +18,7 @@ import org.bukkit.event.weather.WeatherChangeEvent;
 public class events implements Listener {
 	@EventHandler(priority = EventPriority.NORMAL)
 	public void onDamage(EntityDamageEvent event) {
-		Player player;
-		if (event.getEntity() instanceof Player
-				&& (player = (Player) event.getEntity()).getWorld().getName().equals(main.world)
-				&& player.getLocation().getBlockY() >= main.misSpawnY) {
+		if (event.getEntity() instanceof Player && event.getEntity()).getWorld().getName().equals(main.world) && event.getEntity().getLocation().getBlockY() >= main.misSpawnY) {
 			event.setCancelled(true);
 		}
 	}
@@ -37,9 +34,7 @@ public class events implements Listener {
 		} else if (event.getDamager() instanceof ThrownPotion) {
 			ThrownPotion potion = (ThrownPotion) event.getDamager();
 			damager = (Entity) potion.getShooter();
-		} else {
-			return;
-		}
+		} else return;
 		if (event.getEntity() instanceof Player && damager.getWorld().getName().equals(main.world)
 				&& damager.getLocation().getBlockY() >= main.misSpawnY) {
 			event.setCancelled(true);
@@ -57,8 +52,7 @@ public class events implements Listener {
 
 	@EventHandler(priority = EventPriority.NORMAL)
 	public void weatherChange(WeatherChangeEvent event) {
-		if (main.disableWeather.booleanValue() && event.getWorld().getName().equals(main.world)
-				&& event.toWeatherState()) {
+		if (main.disableWeather.booleanValue() && event.getWorld().getName().equals(main.world) && event.toWeatherState()) {
 			event.setCancelled(true);
 			event.getWorld().setStorm(false);
 			event.getWorld().setThundering(false);
