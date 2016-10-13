@@ -69,8 +69,8 @@ public class events implements Listener {
 	public void onPlayerDeath(PlayerDeathEvent e) {
 		Player killed = e.getEntity().getPlayer();
 		Player killer = e.getEntity().getKiller();	
-		title.show(killed, ChatColor.RED + "Вы были убиты " + ChatColor.GOLD + killer.getDisplayName(), null);
-		title.sendActionBar(killer, ChatColor.WHITE + "Вы убили игрока " + ChatColor.GOLD + killed.getDisplayName());
+		title.show(killed, ChatColor.RED + "Г‚Г» ГЎГ»Г«ГЁ ГіГЎГЁГІГ» " + ChatColor.GOLD + killer.getDisplayName(), null);
+		title.sendActionBar(killer, ChatColor.WHITE + "Г‚Г» ГіГЎГЁГ«ГЁ ГЁГЈГ°Г®ГЄГ  lol " + ChatColor.GOLD + killed.getDisplayName());
 	}
 
 }
